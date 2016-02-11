@@ -79,12 +79,7 @@ int to_number(char *a) {
 
 int main(void) {
 
-	/**
-	 * After reading user input, the steps are:
-	 * (1) fork a child process using fork()
-	 * (2) the child process will invoke execvp()
-	 * (3) if command included &, parent will invoke wait()
-	 */
+	
 
 	char *args[MAX_LINE/2 + 1]; /* command line arguments */
 	int should_run = 1; /* flag to determine when to exit program */
@@ -99,6 +94,13 @@ int main(void) {
 	while (should_run) {
 		printf("rsh>");
 		fflush(stdout);
+
+		/**
+		 * After reading user input, the steps are:
+		 * (1) fork a child process using fork()
+		 * (2) the child process will invoke execvp()
+		 * (3) if command included &, parent will invoke wait()
+		 */
 
 		length = fetch_input(buffer);
 		if (length == -1) continue;
