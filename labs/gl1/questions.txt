@@ -1,0 +1,29 @@
+CSD204 Operating Systems
+Dept of Computer Science and Engineering
+Shiv Nadar University
+First Graded Lab on 8-Mar-16
+-----------------------------
+----------------------------------------------------------------------
+1. Write a program  which when executed creates 3 processes out of which one is children and one is grandchild process? Print the process-id of each of the processes[5]
+
+2. Write a program or shellscript which creates one child and waits until this child terminates. Child should prompt the user by printing "Shall I terminate?" on STDOUT. Once the user enters, YES, it should terminate. After child terminates, the parent prints "Process id <pid> is terminating" on STDOUT and after that it terminates. [10]
+
+/* Skeleton Code Problem 2 */
+   #include<stdio.h>
+   #include <sys/wait.h>
+   #include<sys/types.h>
+   #include <stdlib.h>
+   #include <unistd.h>
+   #include <string.h>
+   
+   int main(int argc, char *argv[]){
+       pid_t pid;
+      
+       //Do a man fork on bash prompt
+       //create child process, check pid returned by the fork to decide parent/child
+       //Write appropriate printf. 
+
+      return 0; 
+      }
+
+3. Write a program that emulates shell command "opendir" command. [5]
